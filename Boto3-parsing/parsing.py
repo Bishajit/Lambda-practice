@@ -11,4 +11,5 @@ def lambda_handler(event, context):
     data = obj.get()['Body'].read().decode('utf-8')
     json_data = json.loads(data)
     
-    print(json_data["ip_prefix"]["region"])
+    for i in json_data["prefixes"]:
+        print(i["ip_prefix"], i["region"])
