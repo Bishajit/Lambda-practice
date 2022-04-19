@@ -14,4 +14,4 @@ def lambda_handler(event, context):
         print('the file sends notification')
         sns_client.publish(TopicArn='arn:aws:sns:us-east-1:323867645900:Lambdha-practice-with-s3',Message='added to s3',Subject='s3 data')
     else:
-        print('the file not present')
+        print("the file not present")
